@@ -1,3 +1,5 @@
+%% @author Jitendra Pathak
+
 %% name of module must match file name
 -module(mod_ejabberd_offline_push_old).
 -author("dev@codepond.org").
@@ -29,7 +31,8 @@ post_offline_message(From, To, Body, SubType, MessageId) ->
   FromUser = From#jid.luser,
   DataBody = "{\"toJID\":\"" ++ binary_to_list(ToUser) ++ "\",\"fromJID\":\"" ++ binary_to_list(FromUser) ++ "\",\"body\":\"" ++ binary_to_list(Body) ++ "\"}",
   Method = post,
-  URL = "http://localhost:7070/api/v3/pushnotification/chat?debug=true",
+  %% Api url to send push
+  URL = "http://example.com/api/pushnotification",
   Header = [],
   Type = "application/json",
   HTTPOptions = [],
