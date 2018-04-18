@@ -1,1 +1,8 @@
-# ejabberd_push_toffline_users
+# Send push to offline users using a rest webservice from ejabbered
+1.Clone the repo
+2.sudo erlc -I /usr/local/lib/ejabberd-17.04/include/ mod_ejabberd_offline_push.erl
+3.sudo rm -f /usr/local/lib/ejabberd-17.04/ebin/mod_ejabberd_offline_push.beam
+4.sudo mv mod_ejabberd_offline_push.beam /usr/local/lib/ejabberd-17.04/ebin
+5.Add mod change in yml file path in /usr/local/etc/ejabberd 
+6.mod_ejabberd_offline_push: {}
+7.sudo ejabberdctl  restart
