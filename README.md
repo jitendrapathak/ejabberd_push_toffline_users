@@ -1,4 +1,4 @@
-# Push notification to offline user
+# Push notification to offline users
 
 This is to send push notification to offline user via using rest api
 
